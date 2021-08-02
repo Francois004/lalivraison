@@ -1,0 +1,9 @@
+<p>hero-detail works!</p>
+
+<div *ngIf="hero">
+    <h1> {{hero.name | lowercase }} Details</h1>
+    <h2><span>name :</span> <input id="name" [(ngModel)]="hero.name" placeholder="name"> 
+    </h2>
+    <h2><span>id : {{hero.id}}</span></h2>
+    </div>
+    <button (click)="goBack()">go back</button>

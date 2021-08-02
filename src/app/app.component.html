@@ -24,28 +24,31 @@
 
 <div class="content" role="main">
 
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-
-   
-
-    <span>{{ title }} app is running!</span>
- 
   
-    
-  </div>
-  <nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/heroes">Heroes</a>
-  </nav>
-  <router-outlet></router-outlet>
  
-
-  <input type="hidden" #selection>
+  <h1>Restaurants</h1>
 
   <div class="card-container">
+
+    <div  class="resto"  *ngFor="let restaurant of restaurants"> 
+      <img src="{{restaurant.image}}"  width="350" height="200">
+      <label>
+         <h4 class="myline"><span>{{restaurant.name}}</span> 
+            <span class="line">
+                <span class="Livraison">Livraison <i class="fas fa-check-circle"></i></span>
+                 <span class="Emporter">Emporter <i class="fa fa-times-circle" ></i></span>
+            </span>
+        </h4> 
+         <h5><span>{{restaurant.specialite}}</span></h5> 
+         <h6><span>{{restaurant.ville}}</span></h6> 
+      </label>
+     </div>
+     
   
   </div>
+  <div clas="divb"> 
+    <button class="button5">Voir plus</button>
+</div>
 
   
 
